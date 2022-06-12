@@ -266,8 +266,8 @@ rl.on('line', (input) => {
 
     // delete file
 
-    if (input.slice(0, 6) === 'delete') {
-        let newfileName = input.slice(7);
+    if (input.slice(0, 2) === 'rm') {
+        let newfileName = input.slice(3);
         let fileExtension = path.extname(newfileName);
         let firstNameEnd = newfileName.indexOf(fileExtension);
         let existFile = newfileName.slice(0,firstNameEnd+fileExtension.length);

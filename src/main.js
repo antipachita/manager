@@ -8,7 +8,7 @@ import {createReadStream} from 'fs';
 import { ReadStream } from 'node:fs';
 import path from 'path';
 import zlib from 'zlib';
-
+import crypto from 'crypto';
 
 import {osObject} from './os-methods.js';
 import {getHash} from './hash.js';
@@ -23,8 +23,8 @@ let currentPlace = os.homedir();
 const myArgv = process.argv.slice(2);
 const rl = readline.createInterface({input: process.stdin,output: process.stdout});
 process.chdir(`${currentPlace}`);
-// console.log(`Welcome to the File Manager, ${myArgv[0].slice(11)}!`)
-// console.log(`You are currently in ${currentPlace}`)
+console.log(`Welcome to the File Manager, ${myArgv[0].slice(11)}!`)
+console.log(`You are currently in ${currentPlace}`)
 
 
 
